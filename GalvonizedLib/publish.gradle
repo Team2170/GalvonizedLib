@@ -2,9 +2,9 @@ apply plugin: 'maven-publish'
 
 ext.licenseFile = files("$rootDir/LICENSE.txt")
 
-def pubVersion = System.getenv("releaseVersion") ?: "2025.2.59"
+def pubVersion = System.getenv("releaseVersion") ?: "2025.0.0"
 
-def releasesRepoUrl = "BobcatLib/repos/"
+def releasesRepoUrl = "GalvonizedLib/repos/"
 
 def outputsFolder = file("$buildDir/outputs")
 
@@ -44,10 +44,10 @@ ext.addTaskToCopyAllOutputs = { task ->
     copyAllOutputs.from task.archiveFile
 }
 
-def artifactGroupId = 'BobcatLib'
-def baseArtifactId = 'BobcatLib'
-def zipBaseName = "_GROUP_BobcatLib_ID_${baseArtifactId}-cpp_CLS"
-def javaBaseName = "_GROUP_BobcatLib_ID_${baseArtifactId}-java_CLS"
+def artifactGroupId = 'GalvonizedLib'
+def baseArtifactId = 'GalvonizedLib'
+def zipBaseName = "_GROUP_GalvonizedLib_ID_${baseArtifactId}-cpp_CLS"
+def javaBaseName = "_GROUP_GalvonizedLib_ID_${baseArtifactId}-java_CLS"
 
 task cppHeadersZip(type: Zip) {
     destinationDirectory = outputsFolder
@@ -117,11 +117,11 @@ task outputJavadocJar(type: Jar, dependsOn: javadoc) {
 task vendordepJson() {
     description = 'Builds the vendordep json file.'
     group = 'Build'
-    outputs.file("BobcatLib/BobcatLib.json")
+    outputs.file("GalvonizedLib/GalvonizedLib.json")
 
     copy {
-        from "BobcatLib.json"
-        into "BobcatLib/"
+        from "GalvonizedLib.json"
+        into "GalvonizedLib/"
         expand(version: pubVersion,
         groupId: artifactGroupId,
         artifactId: baseArtifactId)
@@ -159,7 +159,7 @@ publishing {
 
 model {
     publishing {
-        def taskList = createComponentZipTasks($.components, ['BobcatLib'], zipBaseName, Zip, project, includeStandardZipFormat)
+        def taskList = createComponentZipTasks($.components, ['GalvonizedLib'], zipBaseName, Zip, project, includeStandardZipFormat)
 
         publications {
             cpp(MavenPublication) {
