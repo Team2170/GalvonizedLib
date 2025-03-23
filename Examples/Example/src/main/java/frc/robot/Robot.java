@@ -141,7 +141,7 @@ public class Robot extends GalvonizedLibCoreRobot {
         robotName,
         isSim,
         tranPidPathPlanner,
-        rotPidPathPlanner);
+        rotPidPathPlanner).drive.withPathPlanner(super.field, tranPidPathPlanner, rotPidPathPlanner);
 
     loadableAutos.add(new LoadablePathPlannerAuto("Base", new PathPlannerAuto("Base").withName("Base"), false));
 
