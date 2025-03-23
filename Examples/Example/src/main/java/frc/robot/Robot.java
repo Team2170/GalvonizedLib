@@ -146,7 +146,7 @@ public class Robot extends GalvonizedLibCoreRobot {
   @Override
   public void robotPeriodic() {
     CommandScheduler.getInstance().run();
-    m_robotContainer.periodic();
+
   }
 
   @Override
@@ -190,6 +190,7 @@ public class Robot extends GalvonizedLibCoreRobot {
 
   @Override
   public void teleopPeriodic() {
+    Logger.recordOutput("Odometry/Robot",m_robotContainer.drive.getPose());
   }
 
   @Override
