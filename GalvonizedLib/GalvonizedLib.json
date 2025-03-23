@@ -1,7 +1,7 @@
 {
   "fileName": "GalvonizedLib.json",
   "name": "GalvonizedLib",
-  "version": "2025.0.0.2",
+  "version": "2025.0.0.4",
   "frcYear": "2025",
   "uuid": "69eb6caf-545f-44e6-b7f7-ccc646b5586e",
   "mavenUrls": [
@@ -12,7 +12,7 @@
     {
       "groupId": "GalvonizedLib",
       "artifactId": "GalvonizedLib-java",
-      "version": "2025.0.2"
+      "version": "2025.0.4"
     }
   ],
   "requires": [
