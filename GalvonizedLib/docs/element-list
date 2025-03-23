@@ -1,2 +1,11 @@
 GalvonizedLib
+GalvonizedLib.Subsystems.Swerve.Commands
+GalvonizedLib.Subsystems.Swerve.Constants
+GalvonizedLib.Subsystems.Swerve.Subsystems.drive
+GalvonizedLib.Subsystems.Swerve.Subsystems.drive.util
+GalvonizedLib.Subsystems.Swerve.Subsystems.Utilities
+GalvonizedLib.Subsystems.Swerve.Subsystems.vision
+GalvonizedLib.Subsystems.Swerve.Subsystems.vision.util
+GalvonizedLib.Subsystems.Swerve.Subsystems.vision.util.apriltag
+GalvonizedLib.Subsystems.Swerve.Subsystems.vision.util.apriltag.JNI
 GalvonizedLib.Utilities
