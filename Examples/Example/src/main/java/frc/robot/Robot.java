@@ -135,13 +135,9 @@ public class Robot extends GalvonizedLibCoreRobot {
     PIDConstants tranPidPathPlanner = new PIDConstants(10, 0, 0);
     PIDConstants rotPidPathPlanner = new PIDConstants(5, 0, 0);
 
-    m_robotContainer = new RobotContainer(drive,
-        new XboxControllerWrapper(0),
-        loadableAutos,
-        robotName,
-        isSim,
-        tranPidPathPlanner,
-        rotPidPathPlanner).drive.withPathPlanner(super.field, tranPidPathPlanner, rotPidPathPlanner);
+    m_robotContainer = new RobotContainer(drive, new XboxControllerWrapper(0),loadableAutos,robotName,isSim,
+        tranPidPathPlanner,rotPidPathPlanner);
+    drive.withPathPlanner(m_robotContainer.getField(), tranPidPathPlanner, rotPidPathPlanner);
 
     loadableAutos.add(new LoadablePathPlannerAuto("Base", new PathPlannerAuto("Base").withName("Base"), false));
 
