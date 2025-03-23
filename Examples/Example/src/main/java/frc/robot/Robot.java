@@ -146,6 +146,7 @@ public class Robot extends GalvonizedLibCoreRobot {
   @Override
   public void robotPeriodic() {
     CommandScheduler.getInstance().run();
+    m_robotContainer.periodic();
   }
 
   @Override

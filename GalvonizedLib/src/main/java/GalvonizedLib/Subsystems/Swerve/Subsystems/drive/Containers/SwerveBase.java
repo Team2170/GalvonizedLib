@@ -147,6 +147,7 @@ public class SwerveBase {
     for (Vision camera : cameras) {
       camera.periodic();
     }
+    drive.periodic();
   }
 
   public Field2d getField() {
