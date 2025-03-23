@@ -1,7 +1,9 @@
 GalvonizedLib
+GalvonizedLib.Hardware.Controllers
 GalvonizedLib.Subsystems.Swerve.Commands
 GalvonizedLib.Subsystems.Swerve.Constants
 GalvonizedLib.Subsystems.Swerve.Subsystems.drive
+GalvonizedLib.Subsystems.Swerve.Subsystems.drive.Containers
 GalvonizedLib.Subsystems.Swerve.Subsystems.drive.util
 GalvonizedLib.Subsystems.Swerve.Subsystems.Utilities
 GalvonizedLib.Subsystems.Swerve.Subsystems.vision
