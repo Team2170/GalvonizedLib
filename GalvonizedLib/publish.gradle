@@ -2,7 +2,7 @@ apply plugin: 'maven-publish'
 
 ext.licenseFile = files("$rootDir/LICENSE.txt")
 
-def pubVersion = System.getenv("releaseVersion") ?: "2025.0.0.1"
+def pubVersion = System.getenv("releaseVersion") ?: "2025.0.0.2"
 
 def releasesRepoUrl = "GalvonizedLib/repos/"
 
