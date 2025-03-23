@@ -148,4 +148,8 @@ public class SwerveBase {
       camera.periodic();
     }
   }
+
+  public Field2d getField() {
+    return field;
+  }
 }

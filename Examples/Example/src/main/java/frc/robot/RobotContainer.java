@@ -57,4 +57,8 @@ public class RobotContainer extends SwerveBase {
     return super.getAutonomousCommand(name);
   }
 
+  public Field2d getField(){
+    return super.getField();
+  }
+
 }
