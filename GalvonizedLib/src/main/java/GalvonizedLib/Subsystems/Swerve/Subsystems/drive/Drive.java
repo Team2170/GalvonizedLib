@@ -201,20 +201,6 @@ public class Drive extends SubsystemBase {
   }
 
   public Drive withPathPlanner(Field2d field, PIDConstants tranPid, PIDConstants rotPid) {
-    RobotConfig config = null;
-    try {
-      config = RobotConfig.fromGUISettings();
-    } catch (Exception e) {
-      // Handle exception as needed
-      e.printStackTrace();
-      try {
-        throw new Exception("Could not configure Robot Config in PathPlanner!");
-      } catch (Exception e1) {
-        // TODO Auto-generated catch block
-        e1.printStackTrace();
-      }
-      return this;
-    }
 
     // Logging callback for current robot pose
     PathPlannerLogging.setLogCurrentPoseCallback(
